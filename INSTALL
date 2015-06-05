@@ -1,0 +1,17 @@
+mkvirtualenv <>
+easy_install pillow (note down the version x.x.x and make sure jpeg support. If jpeg support is not there do the steps below (1-3) and remove pillow and install again. 
+
+
+1. sudo apt-get install libjpeg-dev libfreetype6-dev zlib1g-dev
+2. sudo ln -s /usr/lib/`uname -i`-linux-gnu/libfreetype.so /usr/lib/
+sudo ln -s /usr/lib/`uname -i`-linux-gnu/libjpeg.so /usr/lib/
+sudo ln -s /usr/lib/`uname -i`-linux-gnu/libz.so /usr/lib/
+3. pip install --upgrade --force-reinstall pillow
+
+# after making sure pillow installed with jpeg support. 
+djangocms -p . mysite -R > ../req.txt
+edit ../req.txt and make sure pillow version is x.x.x (so that it will not be reinstalled)
+now run 
+pip install -r ../req.txt
+djangocms --requirements=../req.txt -p . djcmsmysite
+
