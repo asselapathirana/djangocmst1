@@ -236,6 +236,6 @@ MIGRATION_MODULES = {
     'djangocms_file': 'djangocms_file.migrations_django',
     'djangocms_picture': 'djangocms_picture.migrations_django',
     'djangocms_teaser': 'djangocms_teaser.migrations_django',
-    'djangocms_video': 'djangocms_video.migrations_django'
-    'cms': 'cms.migrations_django'
+    'djangocms_video': 'djangocms_video.migrations_django',
+    'cms': 'cms.migrations_django',
 }
